@@ -2,7 +2,7 @@ use ident::Ident;
 
 use std::borrow::ToOwned;
 
-#[deriving(Clone)]
+#[derive(Clone)]
 pub struct Event {
     pub prefix: String,
     pub command: String,

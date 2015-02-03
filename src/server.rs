@@ -1,4 +1,4 @@
-use std::io::{
+use std::old_io::{
     BufferedReader,
     TcpStream,
     IoError
@@ -13,14 +13,14 @@ use callback::Callback;
 use event;
 use event::Event;
 
-#[deriving(Show, PartialEq, Eq, Clone)]
+#[derive(Debug, PartialEq, Eq, Clone)]
 pub enum Failure {
     AlreadyConnected,
     NotConnected,
     Io(IoError)
 }
 
-#[deriving(Clone)]
+#[derive(Clone)]
 pub struct Server {
     stream: Arc<Mutex<Option<TcpStream>>>,
     pub events: Arc<Mutex<Callback<(Server, Event)>>>,

@@ -1,10 +1,12 @@
-#![feature(globs, phase, slicing_syntax, macro_rules, unboxed_closures)]
+#![feature(plugin, slicing_syntax, unboxed_closures)]
 
-#[phase(plugin)]
+#[plugin]
 extern crate regex_macros;
 extern crate regex;
 
-#[phase(plugin, link)]
+//#[plugin]
+//#[no_link]
+#[macro_use]
 extern crate log;
 
 pub mod server;

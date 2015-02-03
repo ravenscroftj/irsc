@@ -7,3 +7,8 @@ description = "A lightweight library for building IRC bots."
 repository = "https://github.com/hoeppnertill/irsc"
 keywords = ["irc", "internet", "protocol", "useless tags"]
 license = "No decision yet."
+
+[dependencies]
+regex_macros="*"
+regex="*"
+log="0.2"
